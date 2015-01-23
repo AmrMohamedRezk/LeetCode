@@ -11,7 +11,6 @@ public class LeetCode_18_4sum {
 		HashSet<String> visited = new HashSet<String>();
 		for (int i = 0; i < num.length; i++) {
 			for (int j = i + 1; j < num.length; j++) {
-				if (i != j) {
 					if (map.containsKey(target - (num[i] + num[j]))) {
 						List<Pair> others = map.get(target - (num[i] + num[j]));
 						for (Pair other : others) {
@@ -33,7 +32,6 @@ public class LeetCode_18_4sum {
 									visited.add(sb.toString());
 								}
 							}
-						}
 					}
 					if (map.containsKey(num[i] + num[j]))
 						map.get(num[i] + num[j]).add(new Pair(i, j));
