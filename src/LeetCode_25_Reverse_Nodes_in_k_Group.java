@@ -36,7 +36,7 @@ public class LeetCode_25_Reverse_Nodes_in_k_Group {
 			head = head.next;
 			k--;
 		}
-		return k == 0 ? true : false;
+		return k == 0;
 	}
 
 }
