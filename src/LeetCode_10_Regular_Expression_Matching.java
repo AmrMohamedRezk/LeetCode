@@ -4,9 +4,7 @@ public class LeetCode_10_Regular_Expression_Matching {
 	}
 
 	private static boolean isMatch(String s, int i, String pattern, int j) {
-		if (i == s.length()
-				&& (j == pattern.length() || (j + 2 == pattern.length() && pattern
-						.charAt(j + 1) == '*')))
+		if (i == s.length() && j == pattern.length())
 			return true;
 		if (j + 1 < pattern.length() && pattern.charAt(j + 1) == '*') {
 			while (i < s.length()
@@ -21,7 +19,8 @@ public class LeetCode_10_Regular_Expression_Matching {
 			if ((j + 1 <= pattern.length() && pattern.charAt(j) == '.'))
 				return isMatch(s, i + 1, pattern, j + 1);
 			else {
-				if (i<s.length()&&j<pattern.length()&&s.charAt(i) == pattern.charAt(j))
+				if (i < s.length() && j < pattern.length()
+						&& s.charAt(i) == pattern.charAt(j))
 					return isMatch(s, i + 1, pattern, j + 1);
 				else
 					return false;
@@ -31,13 +30,10 @@ public class LeetCode_10_Regular_Expression_Matching {
 
 	public static void main(String[] args) {
 		/*
-		 * isMatch("aa","a") → false
-isMatch("aa","aa") → true
-isMatch("aaa","aa") → false
-isMatch("aa", "a*") → true
-isMatch("aa", ".*") → true
-isMatch("ab", ".*") → true
-isMatch("aab", "c*a*b") → true
+		 * isMatch("aa","a") → false isMatch("aa","aa") → true
+		 * isMatch("aaa","aa") → false isMatch("aa", "a*") → true isMatch("aa",
+		 * ".*") → true isMatch("ab", ".*") → true isMatch("aab", "c*a*b") →
+		 * true
 		 */
 		System.out.println(isMatch("aab", "c*a*b*"));
 
