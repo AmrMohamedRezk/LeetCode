@@ -10,14 +10,12 @@ public class LeetCode_30_Substring_with_Concatenation_of_All_Words {
 		int totalCharacter = L[0].length() * L.length;
 		int wordLength = L[0].length();
 		List<Integer> result = new ArrayList<Integer>();
-		for (int i = 0; i <= S.length() - totalCharacter;) {
+		for (int i = 0; i <= S.length() - totalCharacter;i++) {
 			map.clear();
 			resetMap(map, L);
-			int counter = doCheck(i, wordLength, L.length, S, map);
-			if (counter == L.length) {
+			if (doCheck(i, wordLength, L.length, S, map) == L.length) {
 				result.add(i);
 			} 
-				i++;
 		}
 		return result;
 	}
