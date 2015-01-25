@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 
 public class LeetCode_12_Integer_To_Roman {
 	public String intToRoman(int num) {
