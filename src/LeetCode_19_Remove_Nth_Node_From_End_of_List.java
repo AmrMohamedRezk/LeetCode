@@ -16,6 +16,8 @@ public class LeetCode_19_Remove_Nth_Node_From_End_of_List {
 			fast = fast.next;
 		}
 		fast = fast.next;
+		if(fast==null)
+			return head.next;
 		while(fast.next!=null){
 			fast = fast.next;
 			previous = previous.next;
