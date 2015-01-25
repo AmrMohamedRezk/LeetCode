@@ -28,6 +28,6 @@ public class LeetCode_32_Longest_Valid_Parentheses {
 		return maxLength;
 	}
 	public static void main(String[] args) {
-		longestValidParentheses("))()()(()()()()");
+		longestValidParentheses("()");
 	}
 }

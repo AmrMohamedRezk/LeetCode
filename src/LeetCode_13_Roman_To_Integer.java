@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 
-public class LeetCode_12_Roman_To_Integer {
+public class LeetCode_13_Roman_To_Integer {
     public int romanToInt(String s) {
         HashMap<Character, Integer> romanMap = new HashMap<Character, Integer>();
         romanMap.put('I', 1);
