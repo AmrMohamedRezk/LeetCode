@@ -55,10 +55,4 @@ public class LeetCode_18_4sum {
 			this.y = y;
 		}
 	}
-
-	public static void main(String[] args) {
-		List<List<Integer>> result = fourSum(new int[] { 1, 0, -1, 0, -2, 2 },
-				0);
-		System.out.println();
-	}
 }
