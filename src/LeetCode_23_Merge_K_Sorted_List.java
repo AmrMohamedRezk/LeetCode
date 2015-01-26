@@ -30,7 +30,6 @@ public class LeetCode_23_Merge_K_Sorted_List {
 		}
 		ListNode fakeHead = new ListNode(0);
 		ListNode current = fakeHead;
-<<<<<<< HEAD
 		while (!queue.isEmpty()) {
 			current.next = queue.poll();
 			current = current.next;
@@ -39,20 +38,5 @@ public class LeetCode_23_Merge_K_Sorted_List {
 			}
 		}
 		return fakeHead.next;
-=======
-			while (!queue.isEmpty()) {
-
-				current.next = queue.poll();
-				current = current.next;
-				if (current.next != null) {
-					queue.add(current.next);
-				} else {
-					if (queue.size() == 1) {
-						current.next = queue.poll();
-					}
-				}
-			}
-			return fakeHead.next;
->>>>>>> cf0e3ab6b333b96bae0e2c72304bdff472440412
 	}
 }
