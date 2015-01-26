@@ -28,26 +28,15 @@ public class LeetCode_23_Merge_K_Sorted_List {
 			if (node != null)
 				queue.add(node);
 		}
-		if (!queue.isEmpty()) {
-			ListNode head = queue.poll();
-			ListNode current = head;
-			if (head.next != null)
-				queue.add(head.next);
-			while (!queue.isEmpty()) {
-
-				current.next = queue.poll();
-				current = current.next;
-				if (current.next != null) {
-					queue.add(current.next);
-				} else {
-					if (queue.size() == 1) {
-						current.next = queue.poll();
-						return head;
-					}
-				}
+		ListNode fakeHead = new ListNode(0);
+		ListNode current = fakeHead;
+		while (!queue.isEmpty()) {
+			current.next = queue.poll();
+			current = current.next;
+			if (current.next != null) {
+				queue.add(current.next);
 			}
-			return head;
 		}
-		return null;
+		return fakeHead.next;
 	}
 }
