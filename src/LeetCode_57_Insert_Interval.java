@@ -71,7 +71,7 @@ public class LeetCode_57_Insert_Interval {
 	}
 	public static void main(String[] args) {
 		Interval first = new Interval(1, 5);
-		Interval second = new Interval(6, 7);
+		Interval second = new Interval(2, 7);
 //		Interval third = new Interval(6, 7);
 //		Interval fourth = new Interval(8, 10);
 //		Interval fifth = new Interval(12, 16);
