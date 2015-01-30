@@ -11,16 +11,16 @@ public class LeetCode_39_Combination_Sum {
 
 	private static void combinationSum(int[] candidates, int target, int index,
 			List<List<Integer>> result,ArrayList<Integer> currentSet) {
-		if(index==candidates.length)
-			return;
-		if(target<0){
-			return;
-		}
 		if(target == 0){
 			result.add(new ArrayList<Integer>());
 			for(int i:currentSet)
 				result.get(result.size()-1).add(i);
 			Collections.sort(result.get(result.size()-1));
+			return;
+		}
+		if(index==candidates.length)
+			return;
+		if(target<0){
 			return;
 		}
 		combinationSum(candidates, target, index+1, result, currentSet);
