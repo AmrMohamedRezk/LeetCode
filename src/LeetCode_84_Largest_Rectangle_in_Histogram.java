@@ -9,7 +9,7 @@ public class LeetCode_84_Largest_Rectangle_in_Histogram {
         int i=0;
         Stack<Integer> stack = new Stack<Integer>();
         while(i<height.length){
-        	if(stack.isEmpty()||height[stack.peek()]>=height[i])
+        	if(stack.isEmpty()||height[stack.peek()]<=height[i])
         		stack.push(i++);
         	else{
         		maxArea = Math.max(maxArea, height[stack.pop()]*(stack.isEmpty()? i:i-stack.peek()-1));
