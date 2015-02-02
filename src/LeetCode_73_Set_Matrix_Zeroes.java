@@ -7,7 +7,7 @@ public class LeetCode_73_Set_Matrix_Zeroes {
         boolean [] columns = new boolean[matrix[0].length];
         for(int i=0;i<matrix.length;i++)
         {
-        	for(int j=0;j<matrix[i].length;i++){
+        	for(int j=0;j<matrix[i].length;j++){
         		if(matrix[i][j]==0){
         			rows[i]=true;
         			columns[j]=true;
@@ -16,12 +16,12 @@ public class LeetCode_73_Set_Matrix_Zeroes {
         }
         for(int i=0;i<matrix.length;i++)
         {
-        	for(int j=0;j<matrix[i].length;i++){
+        	for(int j=0;j<matrix[i].length;j++){
         		if(rows[i]||columns[j]){
         			matrix[i][j]=0;
         		}
         	}
         }
-        
     }
+
 }
