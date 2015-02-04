@@ -1,23 +1,29 @@
 
 public class LeetCode_75_Sort_Colors {
 	public void sortColors(int[] A) {
-		int endRed = 0;
-		for(int i=0;i<A.length;i++){
-			if(A[i]==0){
-				int temp = A[i];
-				A[i]=A[endRed];
-				A[endRed] = temp;
-				endRed++;
-			}
-		}
-		int startBlue = A.length-1;
-		for(int i=A.length-1;i>=endRed;i++){
-			if(A[i]==2){
-				int temp = A[i];
-				A[i] = A[startBlue];
-				A[startBlue] = temp;
-				startBlue--;
-			}
-		}
-	}
+        int zeroPosition = 0;
+        int onePosition = 0;
+        int twoPosition = 0;
+        for(int i = 0; i < A.length; i++){
+            if (A[i] == 0){
+                A[twoPosition] = 2;
+                A[onePosition] = 1;
+                A[zeroPosition] = 0;
+                zeroPosition++;
+                onePosition++;
+                twoPosition++;
+            }
+            else if (A[i] == 1){
+                A[twoPosition] = 2;
+                A[onePosition] = 1;
+                onePosition++;
+                twoPosition++;
+            }
+            else if (A[i] == 2){
+                A[twoPosition] = 2;
+                twoPosition++;
+            }
+        }
+    }
+
 }
