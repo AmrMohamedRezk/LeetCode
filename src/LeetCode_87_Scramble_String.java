@@ -21,6 +21,7 @@ public class LeetCode_87_Scramble_String {
 	        }
 	        return false;
 	   }
+	   
 	public static void main(String[] args) {
 		System.out.println(isScramble("abc","bca"));
 	}
