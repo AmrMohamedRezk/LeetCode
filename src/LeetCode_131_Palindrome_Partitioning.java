@@ -14,11 +14,11 @@ public class LeetCode_131_Palindrome_Partitioning {
 			result.add(new ArrayList<String>(arrayList));
 			return;
 		}
-		for (int i = index; i < s.length(); i++) {
-			String sub = s.substring(index,i+1);
+		for (int i = index+1; i <= s.length(); i++) {
+			String sub = s.substring(index,i);
 			if (isPalindrome(sub)) {
 				arrayList.add(sub);
-				partition(s, index + 1,result, arrayList);
+				partition(s, i ,result, arrayList);
 				arrayList.remove(arrayList.size() - 1);
 			}
 		}
