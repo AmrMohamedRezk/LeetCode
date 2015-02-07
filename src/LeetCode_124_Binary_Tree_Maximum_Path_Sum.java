@@ -9,9 +9,9 @@ public class LeetCode_124_Binary_Tree_Maximum_Path_Sum {
 		}
 	}
 
-	int max;
+	 static int max;
 
-	public int maxPathSum(TreeNode root) {
+	public static int maxPathSum(TreeNode root) {
 		if(root==null)
 			max = 0;
 		else
@@ -20,7 +20,7 @@ public class LeetCode_124_Binary_Tree_Maximum_Path_Sum {
 		return max;
 	}
 
-	private int findMax(TreeNode node) {
+	private static int findMax(TreeNode node) {
 		if (node == null)
 			return 0;
 
@@ -38,7 +38,6 @@ public class LeetCode_124_Binary_Tree_Maximum_Path_Sum {
 		TreeNode three = new TreeNode(-2);
 		one.left = two;
 		one.right = three;
-		System.out.println(getMaxPathSum(one));
 
 	}
 }
