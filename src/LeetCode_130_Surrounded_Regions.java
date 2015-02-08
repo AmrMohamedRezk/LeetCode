@@ -26,20 +26,6 @@ public class LeetCode_130_Surrounded_Regions {
 		   }  
 		 }  
 		   
-		 private void markDFS(char[][] board, int x, int y) {  
-		   if (board[x][y] != 'O') {  
-		     return;  
-		   }  
-		   // mark the current node  
-		   board[x][y] = 'N';  
-		   // mark its neighbors if needed  
-		   int rows = board.length, columns = board[0].length;  
-		   if (x+1 < rows-1)  markDFS(board, x+1, y);  
-		   if (x-1 > 0)  markDFS(board, x-1, y);  
-		   if (y+1 < columns-1)  markDFS(board, x, y+1);  
-		   if (y-1 > 0)  markDFS(board, x, y-1);  
-		 }  
-		   
 		 public void solve(char[][] board) {  
 		   if (board.length <= 0 || board[0].length <= 0) return;  
 		   int rows = board.length, columns = board[0].length;  
