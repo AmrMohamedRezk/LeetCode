@@ -11,7 +11,5 @@ public class LeetCode_121_Best_Time_to_Buy_and_Sell_Stock {
 		}
 		return max;
 	}
-	public static void main(String[] args) {
-		
-	}
+
 }
